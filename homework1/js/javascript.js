@@ -22,62 +22,48 @@
  суммирования всех переменных. Указать какие переменные являются чётными.*/
 
  //Находими елементы DOM
-  let a = document.querySelector("#a");
-  let b = document.querySelector("#b");
-  let c = document.querySelector("#c");
+  let a =Number( prompt("введите a:"));
+  let b = Number( prompt("введите b:"));
+  let c = Number( prompt("введите c:"));
   
   
   
 
-  document.querySelector('#run').onclick = start;
+ 
       
 
- // Функция для вычисления
 
-  function start(){
-   //берем значение input 
 
-    let aValue = a.value;
-    let bValue = b.value;
-    let cValue = c.value;
+  
 
     //проверка численного символа
 
-    if(isNaN(aValue || bValue || cValue)){
+    if(isNaN(a || b|| c)){
       alert("некоректно заполнено поле")
-      return false;
+     
     }else{
 
-    
-
-   // преобразуем полученное значение в Number
-
-    aValue = Number(aValue);
-    bValue = Number(bValue);
-    cValue = Number(cValue);
-    console.log(aValue ,  bValue , cValue );
-
-    // сумируем все переменные
-    let resultSumma = aValue + bValue + cValue;
+        // сумируем все переменные
+    let resultSumma = a + b + c;
     console.log("сумма"+":"+ resultSumma);
     
 
     // проверка на четность
-    if(aValue % 2 == 0){
+    if(a % 2 == 0){
       console.log("a : четное");
     }
-    if(bValue % 2 == 0){
+    if(b % 2 == 0){
       console.log("b : четное");
     }
-    if(cValue % 2 == 0){
+    if(c % 2 == 0){
       console.log("c : четное");
     }
 
    // среднее арифметическое 3 чисел
     
-    console.log("среднее арифметическое" + ":" + (aValue + bValue + cValue)/3);
+    console.log("среднее арифметическое" + ":" + (a + b + c/3));
   }
-  }
+  
 
  //Разбиваем число на символы
  
